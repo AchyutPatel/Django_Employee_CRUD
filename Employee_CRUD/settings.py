@@ -39,6 +39,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 
+EXTERNAL_APPS = [
+    "employee",
+    'crispy_forms',
+    'crispy_bootstrap5',
+]
+
+INSTALLED_APPS += EXTERNAL_APPS
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -54,7 +62,7 @@ ROOT_URLCONF = "Employee_CRUD.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ['templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -121,3 +129,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CRISPY_ALLOWED_TEMPLATEs_PACKS= "bootstrap5"
+CRISPY_TEMPLATE_PACK= "bootstrap5"

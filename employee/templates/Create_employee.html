@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    {% if is_update %} Update Employee {% else %} Create Employee {% endif %}
+{% endblock title %}
+
+{% block content %}
+<h2>{% if is_update %} Update Employee {% else %} Add New Employee {% endif %}</h2>
+
+<form method="post" class="form-group card p-4">
+    {% csrf_token %}
+    {{ form | crispy }}
+
+    <button type="submit" class="btn btn-primary">
+        {% if is_update %} Update Employee {% else %} Add Employee {% endif %}
+    </button>
+    
+    <a href="{% url 'All_employee' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock content %}
