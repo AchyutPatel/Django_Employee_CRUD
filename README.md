@@ -85,5 +85,3 @@ This project serves as a beginner-friendly introduction to Django web developmen
 django framework, crud operations, database models, forms handling, views & templates, url routing, sqlite database, django admin
 
 ---
-
-```
