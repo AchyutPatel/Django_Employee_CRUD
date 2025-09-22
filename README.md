@@ -1,7 +1,3 @@
-Your `README.md` draft is already well-structured and clear. Below is a **cleaned-up and properly formatted version** with a few corrections to ensure it renders properly on GitHub and improves consistency:
-
----
-
 ````markdown
 # Django Employee CRUD System
 
